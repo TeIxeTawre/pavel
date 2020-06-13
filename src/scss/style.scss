@@ -628,19 +628,20 @@ h3 {
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        margin: 0 -50px;
+        @include lg(margin, 0);
     }
 
     .skills-image {
-        width: calc(100% / 12 * 5 - 100px);
-        margin: 0 50px;
+        width: calc(100% / 12 * 5 - 50px);
+        margin-right: 50px;
         position: relative;
 
-        @include lg(margin-bottom, 30px);
-        @include lg(width, calc(100% / 12 * 6 - 100px));
-        @include md(width, calc(100% / 12 * 5 - 100px));
-        @include sm(width, calc(100% / 12 * 6 - 100px));
-        @include xs(width, calc(100% / 12 * 8 - 100px));
+        @include lg(margin, 0 0 30px 0);
+        @include lg(width, calc(100% / 12 * 6));
+        @include md(width, calc(100% / 12 * 5));
+        @include sm(width, calc(100% / 12 * 6));
+        @include xs(width, calc(100% / 12 * 8));
+        @include xx(width, calc(100% / 12 * 10));
 
         img {
             width: 90%;
@@ -648,8 +649,8 @@ h3 {
         }
 
         .polyhedron {
-            margin-top: 60px;
-            margin-left: 36px;
+            margin-top: 10%;
+            margin-left: 10%;
         }
 
         .myimg {
@@ -657,20 +658,20 @@ h3 {
             top: 0;
             left: 0;
 
-            @include md(top, 20px);
-            @include md(left, 20px);
+            @include md(top, 0%);
+            @include md(left, 5%);
         }
     }
 
     .skills-table {
-        width: calc(100% / 12 * 7 - 100px);
-        margin: -15px 50px;
+        width: calc(100% / 12 * 7 - 50px);
+        margin: -15px 0 -15px 50px;
 
-        @include md(margin, -7.5px 50px);
-        @include lg(width, calc(100% / 12 * 7 - 100px));
-        @include md(width, calc(100% / 12 * 9 - 100px));
-        @include sm(width, calc(100% / 12 * 11 - 100px));
-        @include xs(width, calc(100% / 12 * 12 - 100px));
+        @include md(margin, -7.5px 0);
+        @include lg(width, calc(100% / 12 * 7));
+        @include md(width, calc(100% / 12 * 9));
+        @include sm(width, calc(100% / 12 * 11));
+        @include xs(width, calc(100% / 12 * 12));
 
         .tool {
             display: flex;

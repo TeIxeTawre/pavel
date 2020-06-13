@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="preloader"></div>
-    <nav id="top-menu">
+    <nav id="top-menu" style="position: fixed; width: 100vw;">
         <div class="container">
             <div class="row">
                 <ul class="main-menu d-lg-none">
@@ -113,73 +113,76 @@
 
     <section id="skills">
         <div class="container">
-            <div class="skills-wrapper">
-                <div class="skills-image">
-                    <img data-src="src/img/myimg.png" class="lazy myimg wow fadeInLeft" data-wow-duration="2s">
-                    <img data-src="src/img/polyhedron.png" class="polyhedron lazy"/>
+            <div class="row">
+                <div class="skills-wrapper">
+                    <div class="skills-image">
+                        <img data-src="src/img/myimg.png" class="lazy myimg wow fadeInLeft" data-wow-duration="2s">
+                        <img data-src="src/img/polyhedron.png" class="polyhedron lazy"/>
+                    </div>
+                    <!-- /.skills-image -->
+                    <div class="skills-table">
+                        <div class="line">
+                            <div class="tool" id="tool-html">HTML</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>90</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-css">CSS</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>80</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-sass">SASS</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>85</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-js">JS</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>50</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-jq">JQuery</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>70</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-php">PHP</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>40</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-wp">WP</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>40</span>%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.skills-table -->
                 </div>
-                <!-- /.skills-image -->
-                <div class="skills-table">
-                    <div class="line">
-                        <div class="tool" id="tool-html">HTML</div>
-                        <div class="progress-bar">
-                            <div class="progress-line">
-                                <span>90</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="tool" id="tool-css">CSS</div>
-                        <div class="progress-bar">
-                            <div class="progress-line">
-                                <span>80</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="tool" id="tool-sass">SASS</div>
-                        <div class="progress-bar">
-                            <div class="progress-line">
-                                <span>85</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="tool" id="tool-js">JS</div>
-                        <div class="progress-bar">
-                            <div class="progress-line">
-                                <span>50</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="tool" id="tool-jq">JQuery</div>
-                        <div class="progress-bar">
-                            <div class="progress-line">
-                                <span>70</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="tool" id="tool-php">PHP</div>
-                        <div class="progress-bar">
-                            <div class="progress-line">
-                                <span>40</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="tool" id="tool-wp">WP</div>
-                        <div class="progress-bar">
-                            <div class="progress-line">
-                                <span>40</span>%
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.skills-table -->
+                <!-- /.skills-wrapper -->
             </div>
-            <!-- /.skills-wrapper -->
+            <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
@@ -249,7 +252,6 @@
     <!-- /#portfolio -->
 
     <section id="contact">
-        <img src="src/img/triangle.png" alt="triangle" class="triangle">
         <div class="container">
             <h2 class="light wow fadeInUp" data-wow-delay=".1s">Contact</h2>
             <p class="section-description wow fadeInUp animate__slower">Have a question or want to work together?</p>
