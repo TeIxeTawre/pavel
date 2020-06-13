@@ -64,7 +64,8 @@ $(document).ready(function(){
         });
     });
 
-    $('.menu-toggle').click(function(){
+    $('.menu-toggle').click(function(e){
+        e.preventDefault();
         activatedMenu();
     }); 
 
