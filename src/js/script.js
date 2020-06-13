@@ -1,3 +1,19 @@
+var wow = new WOW({
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+    // the callback is fired every time an animation is started
+    // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null,    // optional scroll container selector, otherwise use window,
+    resetAnimation: true,     // reset animation on end (default is true)
+});
+wow.init();
+$('.lazy').lazy();
+
 let menuActive = false,
     menuSize = false,
     detectMenu = false,
@@ -20,7 +36,6 @@ $(document).ready(function(){
     $(".mobile-menu .move-to").click(function(e) {
         activatedMenu();
     });
-
     $("a[data-modal]").click(function(e) {
         e.preventDefault();
         $($(this).attr('href')).removeClass(modalOut);
@@ -75,25 +90,6 @@ $(document).ready(function(){
 
     addClassAnimation($('.portfolio-item'), 'fadeIn', 'fadeInUp', 1100);
     
-    wow = new WOW({
-    boxClass:     'wow',      // default
-    animateClass: 'animated', // default
-    offset:       200,          // default
-    mobile:       true,       // default
-    live:         true        // default
-    });
-    wow.init({
-        boxClass:     'wow',      // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset:       0,          // distance to the element when triggering the animation (default is 0)
-        mobile:       true,       // trigger animations on mobile devices (default is true)
-        live:         true,       // act on asynchronously loaded content (default is true)
-        scrollContainer: null,    // optional scroll container selector, otherwise use window,
-        resetAnimation: true,     // reset animation on end (default is true)
-      });
-    
-    $('.lazy').lazy();
-
     if ($(window).scrollTop() + $(window).height() > $('.skills-table').offset().top + $('.skills-table').height() / 2) {
         for( let i = 0; i < $('.progress-line').length; i++) {
             $('.progress-line')[i].style.width = $('.progress-line span')[i].innerHTML + '%';
@@ -108,7 +104,7 @@ $(document).ready(function(){
         if ($(window).width() > 1100) {
             if ($('.menu-toggle').hasClass('active')) {
                 activatedMenu();
-            }
+            } 
         }
 
         if ($(window).width() < 960) {
