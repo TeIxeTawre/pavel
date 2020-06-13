@@ -94,14 +94,12 @@ $mainBlue: #219BD6;
 body {
     font-family: 'Roboto', sans-serif;
     overflow-y: hidden;
+    width: 100vw;
     height: 100vh; 
 }
 
 html {
     font-size: 10px;
-    width: 100vw;
-    overflow-x: hidden;
-    position: relative;
 }
 
 .d-none {
