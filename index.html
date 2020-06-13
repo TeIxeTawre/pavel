@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavel K.</title>
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="src/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div id="preloader"></div>
+    <nav id="top-menu">
+        <div class="container">
+            <div class="row">
+                <ul class="main-menu d-lg-none">
+                    <li><a href="#about" class="move-to">About</a></li>
+                    <li><a href="#skills" class="move-to">Skills</a></li>
+                    <li><a href="#portfolio" class="move-to">Portfolio</a></li>
+                    <li><a href="#contact" class="move-to">Contact</a></li>
+                </ul>
+                <!-- /.main-menu -->
+                <a href="#front-header" class="logo move-to" title="Home">Pavel K.</a>
+                <nav id="top-menu__contacts" class="d-lg-none">
+                    <ul class="social-links">
+                        <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#" class="viber"><i class="fab fa-viber"></i></a></li>
+                        <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                    </ul>
+                    <!-- /.social-links -->
+                    <a href="#callback" class="btn-white" data-modal>Contact me</a>
+                </nav>
+                <!-- /#top-menu__contacts -->
+                <div class="menu-toggle d-none d-lg-flex">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <div class="mobile-menu">
+            <div class="container">
+                <div class="mobile-row">
+                    <ul class="blue-menu">
+                        <li><a href="#about" class="move-to">About</a></li>
+                        <li><a href="#skills" class="move-to">Skills</a></li>
+                        <li><a href="#portfolio" class="move-to">Portfolio</a></li>
+                        <li><a href="#contact" class="move-to">Contact</a></li>
+                    </ul>
+                    <!-- /.blue-menu -->
+                    <div class="mobile-contact">
+                        <a href="#callback" class="btn-white" data-modal>Contact me</a>
+                        <ul class="social-links">
+                            <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#" class="viber"><i class="fab fa-viber"></i></a></li>
+                            <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                        </ul>
+                        <!-- /.social-links -->
+                    </div>
+                    <!-- /.mobile-contact -->
+                </div>
+                <!-- /.mobile-row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.mobile-menu -->
+    </nav>
+    <!-- /.top-menu -->
+
+    <header id="front-header">
+        <h1>
+            <span class="big-word animate__animated animate__slow">My</span>
+            <span class="words-wrapper">
+                <span class="main-word animate__animated animate__delay-2s">Portfolio</span>
+                <span class="small-word animate__animated animate__delay-3s">website</span>
+            </span> 
+            <!-- /.words-wrapper -->
+        </h1>
+        <div class="macbook-wrapper">
+            <img data-src="src/img/macbook.jpg"class="macbook lazy">
+        </div>
+        <!-- /.macbook-wrapper -->
+    </header>
+    <!-- /#front-header -->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-align-left resume wow fadeInUp animate__slower" data-wow-duration="2s">Hi, I’m Pavel. I’m a back-end developer on Wordpress.</h2>
+                <p class="resume wow fadeInUp animate__slow" data-wow-delay=".1s">You know, sometimes people are drawn to something and they strive to succeed in this because they like it madly. They have a dream and they strive for it. 
+                They create plans to achieve their goals and with all their might try to achieve the goal.</p>
+                <p class="resume wow fadeInUp animate__slow" data-wow-delay=".1s">I am one of those people! And this site is a point in my plan. And my dream is to become a free person who can earn on his hobby. 
+                To be able to travel and not depend on the specific place of work.</p>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /#about -->
+
+    <section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="skills-wrapper">
+                    <div class="skills-image">
+                        <img data-src="src/img/myimg.png" class="lazy myimg wow fadeInLeft" data-wow-duration="2s">
+                        <img data-src="src/img/polyhedron.png" class="polyhedron lazy"/>
+                    </div>
+                    <!-- /.skills-image -->
+                    <div class="skills-table">
+                        <div class="line">
+                            <div class="tool" id="tool-html">HTML</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>90</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-css">CSS</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>80</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-sass">SASS</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>85</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-js">JS</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>50</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-jq">JQuery</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>70</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-php">PHP</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>40</span>%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="tool" id="tool-wp">WP</div>
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <span>40</span>%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.skills-table -->
+                </div>
+                <!-- /.skills-wrapper -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /#skills -->
+
+    <section id="portfolio">
+        <div class="portfolio-wrapper">
+            <div class="container">
+                <h2 class="center wow fadeInUp" data-wow-delay=".1s">Portfolio</h2>
+                <p class="section-description wow fadeInUp animate__slower">My last work</p>
+                <div class="row">
+                    <div class="portfolio-item wow">
+                        <div class="lazy-wrapper">
+                            <div class="lazy" data-src="src/img/work1.jpg"></div>
+                        </div>
+                        <!-- /.lazy-wrapper -->
+                        <div class="more-wrapper">
+                            <h3>Suntis</h3>
+                            <div class="categories">
+                                <span>HTML / CSS / JS / JQuery / Bitrix</span>
+                            </div>
+                            <!-- /.categories -->
+                            <a href="#" class="btn-black">Learn more</a>
+                        </div>
+                        <!-- /.more-wrapper -->
+                    </div>
+                    <!-- /.portfolio-item -->
+                    <div class="portfolio-item wow">
+                        <div class="lazy-wrapper">
+                            <div class="lazy" data-src="src/img/work2.jpg"></div>
+                        </div>
+                        <!-- /.lazy-wrapper -->
+                        <div class="more-wrapper">
+                            <h3>System itc</h3>
+                            <div class="categories">
+                                <span>HTML / CSS / JS / JQuery / WP</span>
+                            </div>
+                            <!-- /.categories -->
+                            <a href="#" class="btn-black">Learn more</a>
+                        </div>
+                        <!-- /.more-wrapper -->
+                    </div>
+                    <!-- /.portfolio-item -->
+                    <div class="portfolio-item wow">
+                        <div class="lazy-wrapper">
+                            <div class="lazy" data-src="src/img/work3.jpg"></div>
+                        </div>
+                        <!-- /.lazy-wrapper -->
+                        <div class="more-wrapper">
+                            <h3>first music family</h3>
+                            <div class="categories">
+                                <span>HTML / CSS / JS / JQuery</span>
+                            </div>
+                            <!-- /.categories -->
+                            <a href="#" class="btn-black">Learn more</a>
+                        </div>
+                        <!-- /.more-wrapper -->
+                    </div>
+                    <!-- /.portfolio-item -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.portfolio-wrapper -->
+    </section>
+    <!-- /#portfolio -->
+
+    <section id="contact">
+        <img src="src/img/triangle.png" alt="triangle" class="triangle">
+        <div class="container">
+            <h2 class="light wow fadeInUp" data-wow-delay=".1s">Contact</h2>
+            <p class="section-description wow fadeInUp animate__slower">Have a question or want to work together?</p>
+            <form class="main-form form">
+                <input type="text" placeholder="Your Name" name="your_name" id="your_name" required>
+                <input type="email" placeholder="Your email" name="your_email" id="your_email" required>
+                <textarea name="your_message" placeholder="Your message" id="your_message" cols="30" rows="9" required></textarea>
+                <button type="submit" class="btn-blue">Submit</button>
+            </form>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /#contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <p class="footer-text">Pavel Khatkevich<span> ©2020</span></p>
+                <ul class="social-links">
+                    <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#" class="viber"><i class="fab fa-viber"></i></a></li>
+                    <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                </ul>
+                <!-- /.social-links -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <div id="callback" class="modal animate__animated animate__faster">
+        <a href="#" class="modal_close"><i class="fal fa-times"></i></a>
+        <h2>Call back</h2>
+        <p class="section-description">Enter form and we call you</p>
+        <form class="modal-form form">
+            <input type="text" placeholder="Your Name" name="your_name" id="your_name" required>
+            <input type="email" placeholder="Phone number" name="your_email" id="your_email" required>
+            <textarea name="your_message" placeholder="Your message" id="your_message" cols="30" rows="5" required></textarea>
+            <button type="submit" class="btn-black">Submit</button>
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="src/js/wow.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
