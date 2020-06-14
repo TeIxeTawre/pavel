@@ -89,7 +89,7 @@ $(document).ready(function(){
     addClassAnimation($('.main-word'), 'animate__fadeInDown', 'animate__fadeInUp', 960);
     addClassAnimation($('.small-word'), 'animate__fadeInUp', 'animate__fadeInUp', 960); 
 
-    addClassAnimation($('.portfolio-item'), 'fadeIn', 'fadeInUp', 1100);
+    addClassAnimation($('.portfolio-item'), 'animate__fadeIn', 'animate__fadeInUp', 1100);
     
     if ($(window).scrollTop() + $(window).height() > $('.skills-table').offset().top + $('.skills-table').height() / 2) {
         for( let i = 0; i < $('.progress-line').length; i++) {
