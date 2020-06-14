@@ -142,23 +142,25 @@ section {
     @include md(padding, 50px 0);
 }
 
-p.resume {
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 146%;
-    margin-top: 60px;
+.resume {
+    p {
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 146%;
+        margin-top: 60px;
 
-    @include big(font-size, 28px);
-    @include big(margin-top, 30px);
-    @include sm(font-size, 19px);
-    @include sm(margin-top, 25px);
-}
+        @include big(font-size, 28px);
+        @include big(margin-top, 30px);
+        @include sm(font-size, 19px);
+        @include sm(margin-top, 25px);
+    }
 
-h2.resume {
-    margin-bottom: 70px;
+    h2 {
+        margin-bottom: 70px;
 
-    @include big(margin-bottom, 50px);
-    @include sm(margin-bottom, 30px);
+        @include big(margin-bottom, 50px);
+        @include sm(margin-bottom, 30px);
+    }
 }
 
 p.section-description {
@@ -632,6 +634,7 @@ h3 {
 
 #about {
     @include lg(padding-bottom, 0);
+    @include md(padding-bottom, 60px);
 }
 
 // skills
@@ -771,6 +774,8 @@ h3 {
 
 #portfolio {
     background-color: #FAFAFA;
+
+    @include md(padding-bottom, 100px);
 
     .row {
         @include row-flex();
