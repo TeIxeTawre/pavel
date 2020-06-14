@@ -501,9 +501,9 @@ h3 {
 
 .top-menu-down {
     .row {
-        padding: 15px 0 !important;
+        padding: 14px 0 !important;
 
-        @include sm(padding, 13px 0 13px !important);
+        @include sm(padding, 10px 0 !important);
 
         &:after {
             opacity: 0 !important;
