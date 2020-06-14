@@ -24,6 +24,7 @@ let menuActive = false,
 
 $(document).ready(function(){
     $('body').addClass('loaded');
+    $('#top-menu').removeClass('top-menu-down');
 
     $(".move-to").click(function(e) {
         e.preventDefault();
