@@ -34,8 +34,10 @@ $(document).ready(function(){
         }, 1500);
     });
 
-    $(".mobile-menu .move-to").click(function(e) {
-        activatedMenu();
+    $("#top-menu .move-to").click(function(e) {
+        if ($('.menu-toggle').hasClass('active')) {
+            activatedMenu();
+        }
     });
     $("a[data-modal]").click(function(e) {
         e.preventDefault();

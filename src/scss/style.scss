@@ -12,8 +12,11 @@
     background: transparent;
     border:none;
     outline: none;
+    padding: 70px 0;
+    transition: padding .3s ease-in-out;
 
     @include sm(margin-right, -10px);
+    @include xs(padding, 65px 0)
 }
 .hamburger,.cross{
     position:absolute;
@@ -461,12 +464,12 @@ h3 {
     .row {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between; 
         padding: 45px 0;
         position: relative;
         transition: padding .3s ease-in-out;
 
-        @include xs(padding, 35px 0); 
+        @include lg(padding, 0); 
 
         &:after {
             content: '';
@@ -496,8 +499,11 @@ h3 {
         font-size: 32px;
         color: #FFFFFF;
         margin-left: 60px;
+        transition: padding .3s ease-in-out;
 
         @include lg(margin-left, 0);
+        @include lg(padding, 51px 0);
+        @include xs(padding, 39px 0);
         @include sm(font-size, 26px);
     }
 }
@@ -506,7 +512,15 @@ h3 {
     .row {
         padding: 15px 0 !important;
 
-        @include sm(padding, 13px 0 13px !important);
+        @include lg(padding, 0 !important);
+
+        .menu-toggle {
+            padding: 13px 0 !important;
+        }
+
+        .logo {
+            @include lg(padding, 6px 0 !important);
+        }
 
         &:after {
             opacity: 0 !important;
