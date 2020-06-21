@@ -79,11 +79,6 @@
 .cross span:last-child{
     transform:translateY(-50%) rotate(-45deg) scaleX(0);
 }
-.menu-toggle.active {
-    position: absolute;
-    right: 0;
-    z-index: 10;
-}
 .menu-toggle.active .cross span{
     transition-delay:450ms;
     transform:translateY(50%) rotate(45deg) scaleX(1);
@@ -204,7 +199,7 @@ p.section-description {
 }
 
 .loaded {
-    overflow-y: scroll;
+    overflow-y: auto;
 
     #preloader {
         top: -100%;
@@ -456,6 +451,7 @@ h3 {
 #top-menu {
     background-color: #000;
     position: fixed;
+    top: 0;
     width: 100vw;
     z-index: 2;
 
