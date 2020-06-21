@@ -180,6 +180,6 @@ function activatedMenu() {
     if ( $('body').hasClass('active-menu')) {
         $('.mobile-menu').show(400);
     } else {
-        $('.mobile-menu').hide(250);
+        $('.mobile-menu').hide(350);
     }
 }
