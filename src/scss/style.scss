@@ -171,6 +171,7 @@ p.section-description {
     @include big(font-size, 32px);
     @include lg(font-size, 28px);
     @include sm(font-size, 24px);
+    @include xs(margin-bottom, 60px);
     @include xs(font-size, 20px);
 }
 
@@ -211,6 +212,12 @@ p.section-description {
     z-index: 3;
 }
 
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 // buttons
 
 .btn-white {
@@ -224,6 +231,9 @@ p.section-description {
     display: inline-block;
     outline: none;
     transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @include lg(font-size, 18px);
+    @include lg(padding, 9px 30px);
 
     &:hover {
         color: #000;
@@ -269,6 +279,41 @@ p.section-description {
     &:hover {
         color: #ffffff;
         background-color: #000;
+    }
+}
+
+.link-blue {
+    font-size: 36px;
+    line-height: 86%;
+    color: $mainBlue;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    animation-delay: .5s !important;
+
+    @include big(font-size, 32px);
+    @include lg(font-size, 28px);
+    @include sm(font-size, 24px);
+    @include xs(margin-bottom, 60px);
+    @include xs(font-size, 20px);
+
+    i {
+        margin-left: 8px;
+        margin-bottom: 1px;
+        font-size: 24px !important;
+        @include lg(margin-bottom, 0);
+        @include lg(font-size, 22px !important);
+        @include md(font-size, 20px !important);
+        @include sm(font-size, 18px !important);
+        @include xs(font-size, 16px !important);
+}
+
+    &:hover {
+        span {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -421,7 +466,7 @@ h3 {
     background-color: #000000;
 
     .container {
-        height: calc(100% - 150px);
+        height: calc(100% - 100px);
     }
 
     .mobile-row {
@@ -492,9 +537,9 @@ h3 {
     .logo {
         font-size: 32px;
         color: #FFFFFF;
-        margin-left: 60px;
+        margin-left: 35px;
 
-        @include lg(margin-left, 0);
+        @include lg(margin-left, 0 !important);
         @include sm(font-size, 26px);
     }
 }
@@ -508,6 +553,21 @@ h3 {
         &:after {
             opacity: 0 !important;
         }
+    }
+}
+
+.menu-another-page {
+    padding: 14px 0 !important;
+    
+    @include sm(justify-content, center !important); 
+    @include sm(padding, 10px 0 !important);
+
+    &:after {
+        opacity: 0 !important;
+    }
+
+    .btn-white {
+        @include sm(display, none !important);
     }
 }
 
@@ -548,6 +608,14 @@ h3 {
 
     .telegram:hover {
         color: #0088cc;
+    }
+}
+
+.menu-mobile-size {
+    padding: 14px 0 !important;
+    @include sm(padding, 10px 0 !important);
+    &:after {
+        opacity: 0 !important;
     }
 }
 
@@ -820,6 +888,7 @@ h3 {
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            pointer-events: none;
             transition: top 0s linear .4s, opacity .3s ease-in-out;
 
             .categories {
@@ -851,6 +920,7 @@ h3 {
             .more-wrapper {
                 top: 0;
                 opacity: 1;
+                pointer-events: all;
                 transition: top 0s linear 0s, opacity .3s ease-in-out;
 
                 h3, .categories {
@@ -948,6 +1018,67 @@ footer {
 }
 
 // form
+
+.lang-wrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1;
+
+    @include lg(bottom, 20px);
+    @include lg(right, 20px);
+    @include sm(bottom, 10px);
+    @include sm(right, 10px);
+    
+    label {
+        content: '';
+        pointer-events: none;
+        width: 20px;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #000000;
+
+        @include sm(width, 13px);
+        @include sm(height, 8px);
+        @include sm(right, 1px);
+    }
+
+    select {
+        outline: none;
+        background: transparent;
+        color: #fff;
+        border: none;
+        font-size: 24px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        background-color: #000000;
+        border-radius: 50%;
+        color: #fff;
+        padding-left: 23%;
+        box-shadow: 0 0 10px rgba(#000, .8);
+        cursor: pointer;
+        transition: box-shadow .6s ease-in-out;
+        text-transform: capitalize;
+
+        @include sm(font-size, 20px);
+        @include sm(width, 60px);
+        @include sm(height, 60px);
+        @include sm(font-size, 15px);
+        @include sm(width, 50px);
+        @include sm(height, 50px);
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(#000, .8);
+        }
+    }
+}
 
 .modal-form {
     display: flex;

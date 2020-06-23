@@ -189,7 +189,11 @@
         <div class="portfolio-wrapper">
             <div class="container">
                 <h2 class="center wow animate__fadeInUp" data-wow-delay=".1s">Portfolio</h2>
-                <p class="section-description wow animate__fadeInUp animate__slower">My last work</p>
+                <!-- <p class="section-description wow animate__fadeInUp animate__slower">My last work</p> -->
+                <div class="flex-wrapper">
+                    <a href="#" class="link-blue wow animate__fadeInUp animate__slow"><span>All works</span><i class="far fa-chevron-right"></i></a>
+                </div>
+                <!-- /.flex-wrapper -->
                 <div class="row">
                     <div class="portfolio-item wow">
                         <div class="lazy-wrapper">
@@ -280,6 +284,16 @@
         </div>
         <!-- /.container -->
     </footer>
+
+    <form class="lang-wrapper">
+        <select name="lang-btn" id="lang-btn">
+            <option value="en">En</option>
+            <option value="ru" selected>Ru</option>
+        </select> <!-- /#lang-btn -->
+        <label for="lang-btn">
+        </label>
+    </form>
+    <!-- /.lang-wrapper -->
 
     <div id="callback" class="modal animate__animated animate__faster">
         <a href="#" class="modal_close"><i class="fal fa-times"></i></a>

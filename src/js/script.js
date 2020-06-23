@@ -1,3 +1,6 @@
+$('.resume p').addClass('wow animate__fadeInUp animate__slow');
+$('.resume p').attr('data-wow-delay', '.1s');
+
 var wow = new WOW({
     boxClass:     'wow',      // animated element css class (default is wow)
     animateClass: 'animate__animated', // animation css class (default is animated)
@@ -25,6 +28,8 @@ let menuActive = false,
 $(document).ready(function(){
     $('body').addClass('loaded');
     $('#top-menu').removeClass('top-menu-down');
+
+    $('.lang-wrapper').addClass('animate__fadeInRightBig');
 
     $(".move-to").click(function(e) {
         e.preventDefault();
@@ -104,11 +109,20 @@ $(document).ready(function(){
         $('.progress-line')[i].style.transitionDelay =  i/5 + 's';
     }
 
+    if ($(window).width() > 1100) {
+        $('#top-menu .row').removeClass('menu-mobile-size');
+    } else {
+        $('#top-menu .row').addClass('menu-mobile-size');
+    }
+
     $(window).resize(function() {
         if ($(window).width() > 1100) {
             if ($('.menu-toggle').hasClass('active')) {
                 activatedMenu();
             } 
+            $('#top-menu .row').removeClass('menu-mobile-size');
+        } else {
+            $('#top-menu .row').addClass('menu-mobile-size');
         }
 
         if ($(window).width() < 960) {
@@ -153,27 +167,27 @@ function addClassAnimation(obj, classAnimationTop, classAnimationBot, widthWindo
 function activatedMenu() {
     $('.menu-toggle').toggleClass('active');
         
-    if (!$('#top-menu').hasClass('top-menu-down') && detectMenu == false) {
-        menuSize = true;
-        detectMenu = true;
-    } else if ($('#top-menu').hasClass('top-menu-down') && detectMenu == false) {
-        menuSize = false;
-        detectMenu = true;
-    }
+    // if (!$('#top-menu').hasClass('top-menu-down') && detectMenu == false) {
+    //     menuSize = true;
+    //     detectMenu = true;
+    // } else if ($('#top-menu').hasClass('top-menu-down') && detectMenu == false) {
+    //     menuSize = false;
+    //     detectMenu = true;
+    // }
 
-    if (menuSize == true && menuActive == true) {
-        menuActive = false;
-        detectMenu = false;
-        $('#top-menu').removeClass('top-menu-down');
-    } else if (menuSize == false && menuActive == true) {
-        menuActive = false;
-        detectMenu = false;
-    } else if (menuSize == true && menuActive == false) {
-        menuActive = true;
-        $('#top-menu').addClass('top-menu-down');
-    } else if (menuSize == false && menuActive == false) {
-        menuActive = true;
-    } 
+    // if (menuSize == true && menuActive == true) {
+    //     menuActive = false;
+    //     detectMenu = false;
+    //     $('#top-menu').removeClass('top-menu-down');
+    // } else if (menuSize == false && menuActive == true) {
+    //     menuActive = false;
+    //     detectMenu = false;
+    // } else if (menuSize == true && menuActive == false) {
+    //     menuActive = true;
+    //     $('#top-menu').addClass('top-menu-down');
+    // } else if (menuSize == false && menuActive == false) {
+    //     menuActive = true;
+    // } 
 
     $('body').toggleClass('active-menu');
 
