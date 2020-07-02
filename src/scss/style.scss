@@ -218,6 +218,18 @@ p.section-description {
     margin-top: 10px;
 }
 
+.justify-content-left {
+    justify-content: flex-start !important; 
+}
+
+.justify-content-lg-center {
+    @include lg(justify-content, center !important);
+}
+
+.pt-0 {
+  padding-top: 0 !important;    
+}
+
 // buttons
 
 .btn-white {
@@ -246,15 +258,16 @@ p.section-description {
     border: 2px solid $mainBlue;
     font-weight: 300;
     font-size: 24px;
-    line-height: 28px;
-    padding: 16px 64px;
+    line-height: 146%;
+    padding: 13px 45px;
     background-color: transparent;
+    display: inline-block;
     cursor: pointer;
     outline: none;
     transition: color .3s ease-in-out, background-color .3s ease-in-out;
 
-    @include sm(font-size, 22px);
-    @include sm(padding, 12px 50px);
+    @include sm(padding, 4px 40px);
+    @include sm(font-size, 20px);
 
     &:hover {
         background-color: $mainBlue;
@@ -263,6 +276,7 @@ p.section-description {
 }
 
 .btn-black {
+    display: inline-block;
     font-size: 24px;
     line-height: 146%;
     border: 2px solid #000;
@@ -308,12 +322,36 @@ p.section-description {
         @include md(font-size, 20px !important);
         @include sm(font-size, 18px !important);
         @include xs(font-size, 16px !important);
-}
-
+    }
+    
     &:hover {
         span {
             text-decoration: underline;
         }
+    }
+
+    &.reverse {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.align-right {
+    i {
+        margin-left: 10px;
+    }
+}
+
+.align-left {
+    i {
+        margin-right: 10px;
     }
 }
 
@@ -497,7 +535,7 @@ h3 {
     background-color: #000;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 2;
 
     .row {
@@ -508,7 +546,7 @@ h3 {
         position: relative;
         transition: padding .3s ease-in-out;
 
-        @include xs(padding, 35px 0); 
+        @include xs(padding, 35px 0);  
 
         &:after {
             content: '';
@@ -537,7 +575,7 @@ h3 {
     .logo {
         font-size: 32px;
         color: #FFFFFF;
-        margin-left: 35px;
+        margin-left: 45px;
 
         @include lg(margin-left, 0 !important);
         @include sm(font-size, 26px);
@@ -612,7 +650,7 @@ h3 {
 }
 
 .menu-mobile-size {
-    padding: 14px 0 !important;
+    padding: 14px 0 !important; 
     @include sm(padding, 10px 0 !important);
     &:after {
         opacity: 0 !important;
@@ -620,6 +658,65 @@ h3 {
 }
 
 // header
+
+#another-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header-btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 150px;
+
+        @include lg(margin-bottom, 100px);
+        @include sm(margin-bottom, 75px);
+        @include xx(margin-bottom, 50px);
+
+        .btn-blue {
+            margin: 0 20px;
+            margin-top: 15px;
+        }
+    }
+
+    img {
+        margin-bottom: 32px;
+
+        @include xs(margin-bottom, 10px);
+    }
+
+    .has-img {
+        position: absolute;
+
+        @include xs(position, static);
+    }
+
+    h1 {
+        padding: 0 15px;
+        padding-top: 50px;
+        font-weight: bold;
+        font-size: 71px;
+        line-height: 120%;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+
+        @include big(padding-top, 30px);
+        @include big(font-size, 60px);
+        @include md(padding-top, 20px);
+        @include md(font-size, 46px);
+        @include sm(padding-top, 10px);
+        @include sm(font-size, 36px);
+        @include xs(padding-top, 35px);
+        @include xx(font-size, 29px);
+    }
+}
+
+
+.header-page { 
+    margin-bottom: 50px; 
+}
 
 #front-header {
     background-color: #000;
@@ -844,9 +941,10 @@ h3 {
 
     .row {
         @include row-flex();
-        margin-top: -10px;
-        margin-bottom: -10px;
         justify-content: center;
+
+        @include lg(margin-top, -10px);
+        @include lg(margin-bottom, -10px);
     }
 
     .portfolio-item {
@@ -858,8 +956,9 @@ h3 {
         @include size-xs(12);
 
         position: relative;
-        margin-top: 10px;
-        margin-bottom: 10px;
+
+        @include lg(margin-top, 10px);
+        @include lg(margin-bottom, 10px);
         
         .lazy-wrapper {
             padding-bottom: 100%;
@@ -935,6 +1034,56 @@ h3 {
             }
         }
 
+    }
+}
+
+// another-portfolio
+
+.another-portfolio {
+    margin-top: 300px;
+    background: #FAFAFA;
+
+    img {
+        margin-top: -300px;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+
+        @include xs(margin-bottom, 30px);
+    }
+
+    .like-work {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 24px;
+        line-height: 146%;
+        margin-bottom: 15px;
+
+        @include md(font-size, 18px);
+
+        * {
+            font-size: 24px;
+            line-height: 146%;
+            margin: 0;
+            display: inline;
+
+            @include md(font-size, 18px);
+        }
+
+        .link-blue {
+            margin-left: 5px;
+        }
+    }
+
+    .portfolio-btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        * {
+            margin: 15px 10px 0;
+        }
     }
 }
 

@@ -1,6 +1,7 @@
 $('.resume p').addClass('wow animate__fadeInUp animate__slow');
 $('.resume p').attr('data-wow-delay', '.1s');
 
+
 var wow = new WOW({
     boxClass:     'wow',      // animated element css class (default is wow)
     animateClass: 'animate__animated', // animation css class (default is animated)
@@ -17,15 +18,15 @@ var wow = new WOW({
 wow.init();
 $('.lazy').lazy();
 
-let menuActive = false,
-    menuSize = false,
-    detectMenu = false,
-    modalIn = 'animate__fadeInDown',
-    modalOut = 'animate__fadeOutUp',
-    detectedModal = 0,
-    paddingSection = 100;
-
 $(document).ready(function(){
+    let menuActive = false,
+        menuSize = false,
+        detectMenu = false,
+        modalIn = 'animate__fadeInDown',
+        modalOut = 'animate__fadeOutUp',
+        detectedModal = 0,
+        paddingSection = 100;
+
     $('body').addClass('loaded');
     $('#top-menu').removeClass('top-menu-down');
 
@@ -81,10 +82,11 @@ $(document).ready(function(){
 
     $(".form").submit(function(e) { //устанавливаем событие отправки для формы с id=form
         e.preventDefault();
-        var form_data = $(this).serialize(); //собераем все данные из формы
+        var form_data = $(this).serializeArray(); //собераем все данные из формы
+        form_data.push({name: 'url_page', value: window.location.href});
         $.ajax({
             type: "POST", //Метод отправки
-            url: "send.php", //путь до php фаила отправителя
+            url: "./send.php", //путь до php фаила отправителя
             data: form_data,
             success: function() {
                 //код в этом блоке выполняется при успешной отправке сообщения

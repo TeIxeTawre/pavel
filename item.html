@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Pavel K.</title>
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="src/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div id="preloader"></div>
+    <nav id="top-menu" class="top-menu-down">
+        <div class="container">
+            <div class="row menu-another-page">
+                <a href="/dist/" class="logo" title="home" rel="home" style="margin-left: 0 !important;">Pavel K.</a>
+                <nav id="top-menu__contacts" class="d-lg-none">
+                    <ul class="social-links">
+                        <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#" class="viber"><i class="fab fa-viber"></i></a></li>
+                        <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                    </ul>
+                    <!-- /.social-links -->
+                    <a href="#callback" class="btn-white" data-modal>Contact me</a>
+                </nav>
+                <!-- /#top-menu__contacts -->
+                <a href="#callback" class="btn-white d-none d-lg-flex" data-modal>Contact me</a>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.top-menu -->
+
+    <header id="another-header">
+        <h1 class="has-img">
+            Pavel - web developer
+        </h1>
+        <img src="src/img/macpro-pavel.jpg">
+        <div class="container">
+            <div class="header-btns">
+                <a href="#" class="btn-blue align-left">
+                    <div class="btn-wrapper">
+                        <i class="fal fa-long-arrow-left"></i>
+                        Предыдущая
+                    </div>
+                    <!-- /.btn-wrapper -->
+                </a>
+                <a href="#" class="btn-blue align-right">
+                    <div class="btn-wrapper">
+                        Следующая
+                        <i class="fal fa-long-arrow-right"></i>
+                    </div>
+                    <!-- /.btn-wrapper -->
+                </a>
+            </div>
+            <!-- /.header-btns -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <!-- /#front-header -->
+
+    <div class="another-portfolio">
+        <div class="container">
+            <div class="row">
+                <img data-src="src/img/FrontPage.jpg" class="lazy wow animate__fadeInUp" data-wow-duration="2s" data-wow-offset="-700">
+                <div class="like-work">
+                    Понравилась работа?
+                    <a href="#" class="link-blue reverse">Заказать такой же</a>
+                </div>
+                <!-- /.like-work -->
+                <div class="portfolio-btns">
+                    <a href="#" class="btn-blue">
+                        Перейти на сайт
+                    </a>
+                    <a href="#" class="btn-black">
+                        Портфолио
+                    </a>
+                </div>
+                <!-- /.portfolio-btns -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.portfolio -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <p class="footer-text">Pavel Khatkevich<span> ©2020</span></p>
+                <ul class="social-links">
+                    <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#" class="viber"><i class="fab fa-viber"></i></a></li>
+                    <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                </ul>
+                <!-- /.social-links -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <form class="lang-wrapper">
+        <select name="lang-btn" id="lang-btn">
+            <option value="en">En</option>
+            <option value="ru" selected>Ru</option>
+        </select> <!-- /#lang-btn -->
+        <label for="lang-btn">
+        </label>
+    </form>
+    <!-- /.lang-wrapper -->
+
+    <div id="callback" class="modal animate__animated animate__faster">
+        <a href="#" class="modal_close"><i class="fal fa-times"></i></a>
+        <h2>Call back</h2>
+        <p class="section-description">Enter form and we call you</p>
+        <form class="modal-form form">
+            <input type="text" placeholder="Your Name" name="your_name" id="your_name" required>
+            <input type="email" placeholder="Phone number" name="your_email" id="your_email" required>
+            <textarea name="your_message" placeholder="Your message" id="your_message" cols="30" rows="5" required></textarea>
+            <button type="submit" class="btn-black">Submit</button>
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="src/js/wow.min.js"></script>
+    <script src="src/js/another-page.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
+
+<!-- echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; -->
