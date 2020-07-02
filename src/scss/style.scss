@@ -708,7 +708,8 @@ h3 {
         @include md(font-size, 46px);
         @include sm(padding-top, 10px);
         @include sm(font-size, 36px);
-        @include xs(padding-top, 35px);
+        @include xs(padding-top, 20px);
+        @include xs(padding-bottom, 15px);
         @include xx(font-size, 29px);
     }
 }
