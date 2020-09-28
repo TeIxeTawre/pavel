@@ -1,2 +1,2 @@
 # pavel
-MY SITE
+https://teixetawre.github.io/pavel/
